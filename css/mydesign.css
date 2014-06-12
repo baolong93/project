@@ -1,0 +1,374 @@
+/*****SG CSS: Copyright 2014***********/
+
+*{
+	margin: 0;
+	padding: 0;
+} /*takes up whole space of browser*/
+
+html, body{
+	font-family: "Helvetica Neue", helvetica, tahoma, arial;
+	font-size: 14px;
+	background-color:#fff;
+}
+
+a{
+	color: #fff;
+}
+
+a:hover{
+	color: #00CC00;
+}
+
+header{
+	background-color:#003333;
+	min-height: 50px;
+}
+
+.banner{
+	background-color: none;
+	width: 1000px;
+	min-height: 50px;
+	margin: 0 auto;
+}
+
+nav ul li{
+	display: inline; /*displays links inline*/
+	margin: 22px;
+	/*position: relative;
+	top: 30px;*/
+	font-weight: none;
+	text-transform: none;
+	font-size: 15px;
+}
+
+nav ul li a{
+	text-decoration: none; /*removes underlines of links*/
+}
+
+.navigation{
+	float: right;
+	/*margin-left: 45px;*/
+	margin-top: 15px;
+}
+	
+.logo{
+	margin-top: 3px;
+	margin-left: 0px;
+	float: left;
+}
+
+img{
+	/*max-width:100%;
+	max-height: 100%;*/
+
+	/*width: 100%; /*sets images in whole browser screen according to width*/
+	/*max-height: 660px; /*Important, it helps to resize the height of image while resizing browser*/
+	/*make sure to check the height, as it height does not increase while maximizing browser*/
+}
+
+#content{
+	width: 1000px;
+	height: auto;
+	background-color: none; 
+	margin: 0 auto;
+	padding: 5px;
+	margin-top: 8px;
+	overflow: hidden;
+	display: block;
+	/*overflow: hidden;*/	
+	/*position: relative;*/
+}
+
+.home-middleleft{
+	width: 322px;
+	height: auto;
+	background-color: none;
+	float: left;
+	margin-right: 11px;
+	/*margin-right: 11px;*/
+	position: relative;
+	top: 10px;
+	cursor:pointer;
+	overflow: hidden;
+}
+
+.home-middleleft:hover{
+	filter: alpha(opacity=90);
+	opacity: .6;
+	/*-webkit-filter: brightness(150%);*/
+}
+
+/*.home-middlecenter{
+	width: 322px;
+	height: auto;
+	background-color: none;
+	float: left;
+	margin-right: 17px;
+	position: relative;
+	top: 10px;
+	cursor: pointer;
+}
+
+.home-middlecenter:hover{
+	filter: alpha(opacity=90);
+	opacity: .6;
+	/*-webkit-filter: brightness(150%);
+}*/
+
+/*.home-middleright{
+	width: 322px;
+	height: auto;
+	background-color: none;
+	float: left;
+	position: relative;
+	top: 10px;
+	clear: right;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.home-middleright:hover{
+	filter: alpha(opacity=90);
+	opacity: .6;
+	/*-webkit-filter: brightness(150%);
+}*/
+
+/****** Slider CSS*****/
+
+.slider{
+	height: 500px;
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: none;
+	display: block;
+	/*float: left;*/
+}
+
+  .slider > ul {
+    /* styled by JS to match the added width and height of all <li>’s */
+    position: relative;
+    -webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+
+   .slider > ul > li {
+      float: left;
+      width: 1000px; 
+      height: 500px;
+    }
+
+.slider-buttons ul li a{
+	background-color: none;
+	color: #000;
+}
+/*********************/
+
+.home-thumb-left{
+	width: 322px;
+	height: 85px;
+	background-color: none;
+	border-bottom: dotted 1px #888888;
+	position: relative;
+	bottom: 3px;
+	overflow: hidden;
+}
+
+.home-thumb-left > p{
+	font-size: 12px;
+	color: #505050; 
+}
+
+.home-thumb-left > h4{
+	color: #505050; 
+	padding-top: 3px;
+}
+
+.home-thumb-middle{
+	width: 100%;
+	height: 85px;
+	background-color: none;
+	border-bottom: solid 1px #E8E8E8;
+	border-left: solid 1px #E8E8E8;
+	border-right: solid 1px #E8E8E8;
+	position: relative;
+	bottom: 3px;
+	overflow: hidden;
+}
+
+.home-thumb-middle > p{
+	font-size: 12px;
+	color: #505050;
+}
+
+.home-thumb-middle > h4{
+	color: #505050; 
+	padding-top: 3px;
+}
+
+.home-thumb-right{
+	width: 100%px;
+	height: 85px;
+	background-color: none;
+	border-bottom: solid 1px #E8E8E8;
+	border-left: solid 1px #E8E8E8;
+	border-right: solid 1px #E8E8E8;
+	position: relative;
+	bottom: 3px;
+	overflow: hidden;
+}
+
+.home-thumb-right > p{
+	font-size: 12px;
+	color: #505050;
+}
+
+.home-thumb-right > h4{
+	color: #505050; 
+	padding-top: 3px;
+}
+
+.home-photo-title{
+	background-color: none;
+	width:100%;
+	overflow: hidden;
+	/*color: #707070;*/
+}
+.home-blog-title{
+	background-color: none;
+	width:100%;
+	overflow: hidden;
+	/*color: #707070;*/
+}
+
+h4{
+	color: #505050;
+}
+
+.footer{
+	height: 130px;
+	width: 100%;
+	background-color: #333;
+}
+
+/*** #cecece ** put this color for footer text**/
+/********** Blog CSS ****************/
+
+.home-blog-left{
+	background-color: #FFF5E6;
+	width:450px;
+	height: 200px;
+	float: left;
+	position: relative;
+	top: 10px; 
+}
+
+.home-blog-right{
+	background-color: #FFF5E6;
+	width: 450px;
+	height: 200px;
+	float: right;
+	position: relative;
+	top: 10px;
+}
+
+.home-blog-left2{
+	background-color: #FFF5E6;
+	width: 450px;
+	height: 200px;
+	float: left;
+	margin-top: 20px;
+}
+
+.home-blog-right2{
+	background-color: #FFF5E6;
+	width: 450px;
+	height: 200px;
+	float: right;
+	margin-top: 20px;
+}
+
+.home-advertise{
+	background-color: #F5FAFF;
+	width: 100%;
+	height: 250px;
+}
+
+.h_a_1{
+	background-color:#4D4DB8;
+	margin: 0 auto;
+	text-align: center;
+	height: auto;
+	width: 230px;
+	position: relative;
+	top: 50px;
+	padding: 20px;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+.clearing{
+	clear: both;
+}
+
+/************* Actual Photo Thumb CSS************/
+
+.photo-thumb-box{
+	background-color: none;
+	height: auto;
+	width: 720px;
+	overflow: hidden;
+	padding: 5px;
+	padding-bottom: 0px;
+	float: left;
+}
+
+.photo-thumb{
+	height: 132px;
+	width: 160px;
+	float: left;
+	cursor: pointer;
+	background-color: none;
+	margin-right: 10px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 10px;
+	border: 5px solid white;
+}
+
+.photo-thumb:hover{
+	border: 5px solid orange;
+}
+
+.photo-info{
+	height: 100px;
+	width: 705;
+	background-color: #F5FFF0;
+	padding-top: 3px;
+	padding-left: 5px;
+}
+
+.side-bar{
+	height: 480px;
+	width:250px;
+	background-color: none;
+	float: right;
+	border-left: 1px solid #f0f0f0;
+	overflow: hidden;
+}
+
+.blogbar{
+	margin-left: 30px;
+	margin-top: 13px;
+}
+
+.circle{
+	position: relative;
+	bottom: 20px;
+}
