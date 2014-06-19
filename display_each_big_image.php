@@ -12,8 +12,8 @@ include_once("connect.php");
 <body>
 	<?php include_once("header.php"); ?>
 <div id = "content">
-	<div class = "photo-thumb-box">
-	<div class = "photo-info"></div><br/>
+	<div class = "photo-thumb-box" >
+	<div class = "photo-info" ></div><br/>
 	
 <?php
 	if(isset($_GET['img_thumb2_id'])){
@@ -23,7 +23,7 @@ include_once("connect.php");
 		if($results){
 			while($obj = $results->fetch_object()){
 				//echo '<div class = "photo-thumb">';
-				echo '<img src = "images/'.$obj->img_big_name.'">';
+				echo '<img  id="swap" src = "images/'.$obj->img_big_name.'" onclick="swapImg();">';
 				//echo '</div>';
 		}
 	}
@@ -37,3 +37,28 @@ include_once("connect.php");
 <?php include_once("footer.php"); ?>
 </body>
 </html>
+
+<script>
+	var oImgs = [];
+	oImgs[0] = "1.jpg"
+	oImgs[1] = "2.jpg"
+	oImgs[2] = "6.jpg"
+
+	for(var i=0;i<oImgs.length;i++){
+	var imgs = new Image();
+	imgs.src = "images/" + oImgs[i];
+	}
+
+	var x = 1;
+
+	function swapImg(){
+	var doc = document.getElementById("swap");
+	doc.src = "images/" + oImgs[x];
+	if(x<oImgs.length-1){
+	x ++;
+	}else{
+	x = 0;
+	}
+	}
+
+</script>
