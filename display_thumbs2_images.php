@@ -54,7 +54,7 @@ include_once("connect.php");
 		if($results){
 			while($obj = $results->fetch_object()){
 				echo '<div class = "photo-thumb">';
-				echo '<a href="display_each_big_image.php?img_thumb_id='.$id.'&img_name='.$obj->img_name.'"><img src = "images/'.$obj->img_name.'" height="auto" width="200px"></a>';
+				echo '<a href="display_each_big_image.php?img_thumb2_id='.$obj->img_thumb2_id.'"><img src = "image_thumbs_2/'.$obj->img_name.'"></a>';
 				echo '</div>';
 		}
 	}

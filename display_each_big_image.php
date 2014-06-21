@@ -16,35 +16,19 @@ include_once("connect.php");
 	<div class = "photo-info" ></div><br/>
 	
 <?php
-// 	if(isset($_GET['img_thumb2_id'])){
-// 		$id = preg_replace('#[^0-9]#i','',$_GET['img_thumb2_id']);
-// 		$current_url = base64_encode($_SERVER['REQUEST_URI']);
-// 		$results = $mysqli->query("SELECT img_big_name FROM image_big WHERE img_thumb2_id = '$id'");
-// 		if($results){
-// 			while($obj = $results->fetch_object()){
-// 				//echo '<div class = "photo-thumb">';
-// 				echo '<img  id="swap" src = "images/'.$obj->img_big_name.'" onclick="swapImg();">';
-// 				//echo '</div>';
-// 		}
-// 	}
-// }
-
-if(isset($_GET['img_thumb_id'])){
-		$id = preg_replace('#[^0-9]#i','',$_GET['img_thumb_id']);
-		$img_name = $_GET['img_name'];
+	if(isset($_GET['img_thumb2_id'])){
+		$id = preg_replace('#[^0-9]#i','',$_GET['img_thumb2_id']);
 		$current_url = base64_encode($_SERVER['REQUEST_URI']);
-		$results = $mysqli->query("SELECT * FROM image_thumbs_2 WHERE img_thumb_id = '$id'");
-		$array = array();
-		echo '<img  id="swap" src = "images/'.$img_name.'" onclick="swapImg();">';
+		$results = $mysqli->query("SELECT img_big_name FROM image_big WHERE img_thumb2_id = '$id'");
 		if($results){
 			while($obj = $results->fetch_object()){
-				$array[] = $obj->img_name;
-				
+				//echo '<div class = "photo-thumb">';
+				echo '<img  id="swap" src = "images/'.$obj->img_big_name.'" onclick="swapImg();">';
+				//echo '</div>';
 		}
 	}
 }
 ?>
-
 </div>
 <div class = "side-bar"></div>
 <div class = "clearing"></div><br />
@@ -55,19 +39,22 @@ if(isset($_GET['img_thumb_id'])){
 </html>
 
 <script>
-	var listImage = <?php echo json_encode($array); ?>;
+	var oImgs = [];
+	oImgs[0] = "1.jpg"
+	oImgs[1] = "2.jpg"
+	oImgs[2] = "6.jpg"
 
-	for(var i=0;i<listImage.length;i++){
+	for(var i=0;i<oImgs.length;i++){
 	var imgs = new Image();
-	imgs.src = "images/" + listImage[i];
+	imgs.src = "images/" + oImgs[i];
 	}
 
 	var x = 1;
 
 	function swapImg(){
 	var doc = document.getElementById("swap");
-	doc.src = "images/" + listImage[x];
-	if(x<listImage.length-1){
+	doc.src = "images/" + oImgs[x];
+	if(x<oImgs.length-1){
 	x ++;
 	}else{
 	x = 0;
