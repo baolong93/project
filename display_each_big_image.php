@@ -27,31 +27,8 @@ include_once("connect.php");
 				//echo '</div>';
 		}
 	}
-		$results2 = $mysqli->query("SELECT img_big_name FROM image_big");
-		$array = array();
-		if($results2){
-			while($obj = $results2->fetch_object()){
-				$array[] = $obj->img_big_name;
-		}
-	}
 }
-
-// if(isset($_GET['img_thumb_id'])){
-// 		$id = preg_replace('#[^0-9]#i','',$_GET['img_thumb_id']);
-// 		$img_name = $_GET['img_name'];
-// 		$current_url = base64_encode($_SERVER['REQUEST_URI']);
-// 		$results = $mysqli->query("SELECT * FROM image_thumbs_2 WHERE img_thumb_id = '$id'");
-// 		$array = array();
-// 		echo '<img  id="swap" src = "images/'.$img_name.'" onclick="swapImg();">';
-// 		if($results){
-// 			while($obj = $results->fetch_object()){
-// 				$array[] = $obj->img_name;
-				
-// 		}
-// 	}
-// }
 ?>
-
 </div>
 <div class = "side-bar"></div>
 <div class = "clearing"></div><br />
@@ -62,19 +39,22 @@ include_once("connect.php");
 </html>
 
 <script>
-	var listImage = <?php echo json_encode($array); ?>;
+	var oImgs = [];
+	oImgs[0] = "1.jpg"
+	oImgs[1] = "2.jpg"
+	oImgs[2] = "6.jpg"
 
-	for(var i=0;i<listImage.length;i++){
+	for(var i=0;i<oImgs.length;i++){
 	var imgs = new Image();
-	imgs.src = "images/" + listImage[i];
+	imgs.src = "images/" + oImgs[i];
 	}
 
 	var x = 1;
 
 	function swapImg(){
 	var doc = document.getElementById("swap");
-	doc.src = "images/" + listImage[x];
-	if(x<listImage.length-1){
+	doc.src = "images/" + oImgs[x];
+	if(x<oImgs.length-1){
 	x ++;
 	}else{
 	x = 0;
